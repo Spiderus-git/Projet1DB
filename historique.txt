@@ -1,0 +1,5 @@
+Difficulté à créer un cluster MongoDB avec 2 routeurs et 3 serveurs
+
+- Conflits de ports (ports choisis 27016 (serveur config), 27017 (routeur A), 27018 (routeur B))
+
+- Utilisation du networks (configuration de type passerelle (bridge))

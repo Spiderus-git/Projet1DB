@@ -5,9 +5,9 @@ services:
     container_name: routeur_1
     ports:
       - "27017:27017"
-    command: mongos --configdb configReplSet/configsvr:27016
+    command: mongos --configdb config/configsvr:27016
     depends_on:
-      - configsvr
+      - config
     networks:
       - mongo_network
 
@@ -15,57 +15,134 @@ services:
     image: mongo
     container_name: routeur_2
     ports:
-      - "27018:27017"
-    command: mongos --configdb configReplSet/configsvr:27016
+      - "27018:27018"
+    command: mongos --configdb config/configsvr:27016
     depends_on:
-      - configsvr
+      - config
     networks:
       - mongo_network
 
-  routeur_3:
+  # Serveur de configuration
+  config:
     image: mongo
-    container_name: routeur_3
-    ports:
-      - "27019:27017"
-    command: mongos --configdb configReplSet/configsvr:27016
-    depends_on:
-      - configsvr
-    networks:
-      - mongo_network
-
-  # Serveur de configuration pour mongos
-  configsvr:
-    image: mongo
-    container_name: configsvr
-    command: mongod --configsvr --replSet configReplSet --port 27016 --bind_ip_all
+    container_name: config
+    command: mongod --configsvr --replSet configReplSet --port 27016
     ports:
       - "27016:27016"
     volumes:
-      - ./data/configdb:/data/db
+      - ./data/config:/data/db
     networks:
       - mongo_network
 
-  # Serveur A
+  # Serveur principal A et ses répliques
   principal_a:
     image: mongo
-    container_name: serveur_a
-    ports:
-      - "27020:27017"
+    container_name: principal_a
     command: mongod --replSet rs0 --bind_ip_all
     volumes:
-      - ./data/serveur_a:/data/db
+      - ./data/principal_a:/data/db
+    networks:
+      - mongo_network
+  secondaire_a_1:
+    image: mongo
+    container_name: principal_a_1
+    command: mongod --replSet rs0 --bind_ip_all
+    volumes:
+      - ./data/principal_a:/data/db
+    networks:
+      - mongo_network
+  secondaire_a_2:
+    image: mongo
+    container_name: principal_a_2
+    command: mongod --replSet rs0 --bind_ip_all
+    volumes:
+      - ./data/principal_a:/data/db
+    networks:
+      - mongo_network
+  secondaire_a_3:
+    image: mongo
+    container_name: principal_a_3
+    command: mongod --replSet rs0 --bind_ip_all
+    volumes:
+      - ./data/principal_a:/data/db
     networks:
       - mongo_network
 
-  # Serveur B
-  serveur_b:
+  # Serveurs principaux B et C et leurs répliques
+  principal_b:
     image: mongo
-    container_name: serveur_b
-    ports:
-      - "27021:27017"
-    command: mongod --replSet rs1 --bind_ip_all
+    container_name: principal_b
+    command: mongod --replSet rs0 --bind_ip_all
     volumes:
-      - ./data/serveur_b:/data/db
+      - ./data/principal_a:/data/db
+    networks:
+      - mongo_network
+  secondaire_b_1:
+    image: mongo
+    container_name: principal_b_1
+    command: mongod --replSet rs0 --bind_ip_all
+    volumes:
+      - ./data/principal_a:/data/db
+    networks:
+      - mongo_network
+  secondaire_b_2:
+    image: mongo
+    container_name: principal_b_2
+    command: mongod --replSet rs0 --bind_ip_all
+    volumes:
+      - ./data/principal_a:/data/db
+    networks:
+      - mongo_network
+  secondaire_b_3:
+    image: mongo
+    container_name: principal_b_3
+    command: mongod --replSet rs0 --bind_ip_all
+    volumes:
+      - ./data/principal_a:/data/db
+    networks:
+      - mongo_network
+
+  principal_c:
+    image: mongo
+    container_name: principal_c
+    command: mongod --replSet rs0 --bind_ip_all
+    volumes:
+      - ./data/principal_a:/data/db
+    networks:
+      - mongo_network
+  secondaire_c_1:
+    image: mongo
+    container_name: principal_c_1
+    command: mongod --replSet rs0 --bind_ip_all
+    volumes:
+      - ./data/principal_a:/data/db
+    networks:
+      - mongo_network
+  secondaire_c_2:
+    image: mongo
+    container_name: principal_c_2
+    command: mongod --replSet rs0 --bind_ip_all
+    volumes:
+      - ./data/principal_a:/data/db
+    networks:
+      - mongo_network
+  secondaire_c_3:
+    image: mongo
+    container_name: principal_c_3
+    command: mongod --replSet rs0 --bind_ip_all
+    volumes:
+      - ./data/principal_a:/data/db
+    networks:
+      - mongo_network
+
+  
+  # Serveur historique
+  historique:
+    image: mongo
+    container_name: historique
+    command: mongod --replSet historiqueRS --bind_ip_all
+    volumes:
+      - ./data/historique:/data/db
     networks:
       - mongo_network
 
