@@ -3,6 +3,7 @@ Difficulté à créer un cluster MongoDB avec 2 routeurs et 3 serveurs
 - Utilisation de Réplicas dans le cluster (serveur A, serveur A 1, serveur A 2 …)
 
 Sources : 
+- https://devhints.io/docker-compose
 - https://www.mongodb.com/resources/products/compatibilities/deploying-a-mongodb-cluster-with-docker
 - https://dev.to/mattdark/deploy-a-mongodb-cluster-with-docker-compose-4ieo
 - https://medium.com/workleap/the-only-local-mongodb-replica-set-with-docker-compose-guide-youll-ever-need-2f0b74dd8384
