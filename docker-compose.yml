@@ -1,4 +1,3 @@
-version: '3'
 services:
   # Routeurs
   routeur_1:
@@ -6,34 +5,70 @@ services:
     container_name: routeur_1
     ports:
       - "27017:27017"
-    command: mongos --configdb routeur_1/localhost:27017
+    command: mongos --configdb configReplSet/configsvr:27016
+    depends_on:
+      - configsvr
+    networks:
+      - mongo_network
 
   routeur_2:
     image: mongo
     container_name: routeur_2
     ports:
       - "27018:27017"
-    command: mongos --configdb routeur_2/localhost:27017
+    command: mongos --configdb configReplSet/configsvr:27016
+    depends_on:
+      - configsvr
+    networks:
+      - mongo_network
 
   routeur_3:
     image: mongo
     container_name: routeur_3
     ports:
       - "27019:27017"
-    command: mongos --configdb routeur_3/localhost:27017
+    command: mongos --configdb configReplSet/configsvr:27016
+    depends_on:
+      - configsvr
+    networks:
+      - mongo_network
 
-  # Serveur Principal A
+  # Serveur de configuration pour mongos
+  configsvr:
+    image: mongo
+    container_name: configsvr
+    command: mongod --configsvr --replSet configReplSet --port 27016 --bind_ip_all
+    ports:
+      - "27016:27016"
+    volumes:
+      - ./data/configdb:/data/db
+    networks:
+      - mongo_network
+
+  # Serveur A
   principal_a:
     image: mongo
-    container_name: principal_a
+    container_name: serveur_a
     ports:
       - "27020:27017"
-    command: mongod --replSet rs0
+    command: mongod --replSet rs0 --bind_ip_all
+    volumes:
+      - ./data/serveur_a:/data/db
+    networks:
+      - mongo_network
 
-  # Serveur Principal B
-  principal_b:
+  # Serveur B
+  serveur_b:
     image: mongo
-    container_name: principal_b
+    container_name: serveur_b
     ports:
       - "27021:27017"
-    command: mongod --replSet rs1
+    command: mongod --replSet rs1 --bind_ip_all
+    volumes:
+      - ./data/serveur_b:/data/db
+    networks:
+      - mongo_network
+
+networks:
+  mongo_network:
+    driver: bridge
