@@ -1,6 +1,3 @@
-
-
-
 On a copié le fichier json vers le conteneur routeur 1:
 
 docker cp ./Abooks.json routeur_1:/Abooks.json
@@ -24,3 +21,5 @@ On teste quelques requêtes pour voir si la base fonctionne:
 
 db.books.find()
 db.books.exists()
+
+Executer le programme tests.py dans fichier de test.
