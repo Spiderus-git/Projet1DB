@@ -135,7 +135,7 @@ services:
     networks:
       - mongo_network
 
-  
+
   # Serveur historique
   historique:
     image: mongo
@@ -145,6 +145,7 @@ services:
       - ./data/historique:/data/db
     networks:
       - mongo_network
+      
 
 networks:
   mongo_network:

@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf7a7e16-26ab-4d25-a4dc-0c7af3dd5adf" name="Changes" comment="" />
+    <list default="true" id="cf7a7e16-26ab-4d25-a4dc-0c7af3dd5adf" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../data/historique/WiredTiger.turtle" beforeDir="false" afterPath="$PROJECT_DIR$/../data/historique/WiredTiger.turtle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/historique/WiredTiger.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../data/historique/WiredTiger.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/historique/collection-0-12801193796329124410.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../data/historique/collection-0-12801193796329124410.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/historique/index-1-12801193796329124410.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../data/historique/index-1-12801193796329124410.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/historique/journal/WiredTigerLog.0000000002" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/historique/mongod.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../data/historique/mongod.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/historique/sizeStorer.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../data/historique/sizeStorer.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/principal_a/WiredTiger.turtle" beforeDir="false" afterPath="$PROJECT_DIR$/../data/principal_a/WiredTiger.turtle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/principal_a/WiredTiger.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../data/principal_a/WiredTiger.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/principal_a/collection-0-4638098695880403470.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../data/principal_a/collection-0-4638098695880403470.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/principal_a/index-1-4638098695880403470.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../data/principal_a/index-1-4638098695880403470.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/principal_a/journal/WiredTigerLog.0000000002" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/principal_a/mongod.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../data/principal_a/mongod.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/principal_a/sizeStorer.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../data/principal_a/sizeStorer.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../historique.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../historique.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

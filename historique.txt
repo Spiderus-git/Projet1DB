@@ -2,6 +2,8 @@ Difficulté à créer un cluster MongoDB avec 2 routeurs et 3 serveurs
 
 - Utilisation de Réplicas dans le cluster (serveur A, serveur A 1, serveur A 2 …)
 
+- Utilisation du sharding pour importer la base "books"
+
 Sources : 
 - https://devhints.io/docker-compose
 - https://www.mongodb.com/resources/products/compatibilities/deploying-a-mongodb-cluster-with-docker
@@ -12,10 +14,8 @@ Sources :
 
 - Utilisation du networks (configuration de type passerelle (bridge))
 
-- Importer la base Books
+- Importer la base Books (D'abord faire mongod puis mongosh)
 
 Sources :
 - https://stackoverflow.com/questions/61400292/import-a-mongo-database-into-a-docker-container
-
-Essayer : 
-mongodump --uri 'mongodb://localhost:27017/books' --archive=<C:\Users\The_one\Desktop\Projet1DB> --gzip
+- https://www.mongodb.com/docs/manual/reference/method/sh.enableSharding/
