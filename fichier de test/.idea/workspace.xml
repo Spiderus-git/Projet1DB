@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cf7a7e16-26ab-4d25-a4dc-0c7af3dd5adf" name="Changes" comment="">
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/../data/historique/WiredTiger.turtle" beforeDir="false" afterPath="$PROJECT_DIR$/../data/historique/WiredTiger.turtle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../data/historique/WiredTiger.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../data/historique/WiredTiger.wt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../data/historique/collection-0-12801193796329124410.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../data/historique/collection-0-12801193796329124410.wt" afterDir="false" />
@@ -22,6 +23,11 @@
       <change beforePath="$PROJECT_DIR$/../docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../historique.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../historique.txt" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/../data/historique/WiredTiger.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../data/historique/WiredTiger.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/principal_a/WiredTiger.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../data/principal_a/WiredTiger.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,16 +52,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< Updated upstream
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;
+=======
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/victo/PycharmProjects/pythonProject1",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+>>>>>>> Stashed changes
   }
 }</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-98f27166c754-ba05f1cad1b1-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.21829.153" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-PY-242.22855.92" />
+        <option value="bundled-python-sdk-b068d85d1acf-399fe30bd8c1-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-242.22855.92" />
       </set>
     </attachedChunks>
   </component>
@@ -67,7 +88,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1729772808873</updated>
+      <workItem from="1729777467207" duration="2220000" />
+      <workItem from="1731413537852" duration="152000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>
